@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Teaching Tools Poll</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      padding: 40px;
+    }
+    .container {
+      background-color: white;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    .option {
+      margin: 10px 0;
+    }
+    input[type="submit"] {
+      margin-top: 20px;
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h2>What digital tools do you currently use for teaching?</h2>
+  <form id="teachingPoll">
+    <div class="option">
+      <input type="checkbox" name="tools" value="YouTube"> YouTube
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Got Questions"> Got Questions
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Biblical Commentary"> Biblical Commentary
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="The Bible"> The Bible (Digital)
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Blue Letter Bible"> Blue Letter Bible
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Dake Annotated Reference Bible"> Dake Annotated Reference Bible
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Logos Bible Software"> Logos Bible Software
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Strong's Concordance"> Strong's Concordance
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Original Language Texts"> Original Language Texts
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Sermon Archives and Resources"> Sermon Archives and Resources
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Apologetics Bible"> Apologetics Bible
+    </div>
+    <div class="option">
+      <input type="checkbox" name="tools" value="Other"> Other: <input type="text" name="otherTool" placeholder="Enter tool name">
+    </div>
+    <input type="submit" value="Submit">
+  </form>
+  <div id="confirmation" style="display:none; text-align:center; color:green; margin-top:20px;">
+    Thank you for submitting your response!
+  </div>
+</div>
+
+<script>
+  document.getElementById("teachingPoll").addEventListener("submit", function(e) {
+    e.preventDefault();
+    document.getElementById("confirmation").style.display = "block";
+    // You could send this data to a backend service if needed
+  });
+</script>
+
+</body>
+</html>
+  
